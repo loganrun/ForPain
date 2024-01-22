@@ -20,7 +20,7 @@ const makeTable = (rows) => {
 //PArt 2
 let newString = `ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor's Assistant,26`;
 let staged = string.split("\n");
-//console.log(staged)  
+console.log(staged)  
 let persons = staged.map((person) => person.split(","));
 console.log(persons)
 
@@ -77,5 +77,49 @@ console.log(sum)
 
 //5 Full Circle
 
+//let newCsv = people.map(csvData);
+
+// const getData(rows)=>{
+//   return rows.id
+
+// }
+let intCsv = people.map(person =>
+  Object.values(person)
+) 
+//console.log(newCsv)
+let csvHeader = Object.keys(people[0])
+//console.log(csvHeader)
+intCsv.unshift(csvHeader)
+//console.log(intCsv)
+
+let closeCsv = intCsv.map(subarray => subarray.concat("\n"))
+console.log(closeCsv)
+
+let almostCSV = closeCsv.join(',').toString()
+console.log(almostCSV)
+
+
+// for (x of people){
+//   let id= x.id
+//   // let key= []
+  
+//   //console.log(keys)
+//   console.log(id)
+// }
+
+
+// function getData()
+
+
+// for (i=0; i<2; i++) {
+//   people.map(person) =>{}
+
+//   key.push(Object.keys(i[i]))
+
+//   id = Object.values(x)
+//   //console.log(id)
+//   console.log(key[0])
+//   i++
+// }
 
 
